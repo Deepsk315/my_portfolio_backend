@@ -54,10 +54,10 @@ router.post("/contact", (req, res) => {
     from: name,
     to: process.env.EMAIL_USER,
     subject: "Contact Form Submission - Portfolio",
-    html: `<p> Name : ${name}</p>
+    html: `    <p> Name : ${name}</p>
                <p> Email : ${email}</p>
                <p> Phone : ${phone}</p>
-               <p> Message : ${message}</p>`,
+               <p> Message : ${message}</p> `,
   };
   contactEmail.sendMail(mail, (error) => {
     if (error) {
